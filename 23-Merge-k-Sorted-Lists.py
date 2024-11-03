@@ -1,10 +1,14 @@
 # Definition for singly-linked list.
-# class ListNode:
+# class ListNode(object):
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-class Solution:
-    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+class Solution(object):
+    def mergeKLists(self, lists):
+        \\\
+        :type lists: List[Optional[ListNode]]
+        :rtype: Optional[ListNode]
+        \\\
         all_values = []
         for lst in lists:
             while lst:
