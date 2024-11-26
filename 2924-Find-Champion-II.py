@@ -1,10 +1,5 @@
-class Solution(object):
-    def findChampion(self, n, edges):
-        """
-        :type n: int
-        :type edges: List[List[int]]
-        :rtype: int
-        """
+class Solution:
+    def findChampion(self, n: int, edges: List[List[int]]) -> int:
         l=[0]*(n)
         for s,e in edges:
             l[e]+=1
