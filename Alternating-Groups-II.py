@@ -8,4 +8,5 @@ class Solution:
                 l=r
             if r-l+1>=k:
                 c+=1
+            print(l,r,c)
         return c
