@@ -1,6 +1,15 @@
 class Solution:
     def maxSubsequence(self, nums: List[int], k: int) -> List[int]:
-        dup=sorted(nums)
-        for i in range(len(nums)-k): 
-            nums.remove(dup[i])
-        return nums
+        minHeap = []
+        ans = []
+        for a in nums:
+            if len(minHeap) < k:
+                heappush(minHeap , a)
+                ans.append(a)
+            else:
+                if a > minHeap[0]:
+                    z = heappop(minHeap)
+                    ans.remove(z)
+                    heappush(minHeap , a)
+                    ans.append(a)
+        return ans
